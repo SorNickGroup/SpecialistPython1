@@ -28,4 +28,8 @@
 # 19 189.81 Rub.
 # 20 199.80 Rub.
 
-# TODO: your code here
+x = float(input("Введите стоимость товара: "))
+n = 1
+while n <= 20:
+    print(str(n) + " {0:.2f}".format(n*x) +" Rub.")
+    n+=1
