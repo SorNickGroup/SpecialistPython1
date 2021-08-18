@@ -9,4 +9,11 @@
 # 123
 # 1234
 
-# TODO: your code here
+n=int(input("Введите число: "))
+step=1
+s="1"
+while step<=n:
+    if step>1:
+        s+=str(step)
+    print(s)
+    step+=1
