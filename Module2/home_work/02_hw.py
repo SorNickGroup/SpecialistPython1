@@ -7,4 +7,10 @@
 # коров, корова или коровы
 # Например, 1 корова, 2 коровы, 5 коров, 125 коров.
 
-# TODO: your code here
+n = int(input("Введите число: "))
+if n%10 == 1 and n%100 != 11:
+    print(str(n) + " korova")
+elif n%10 < 5 and n%100 > 20:
+    print(str(n) + " korovy")
+else:
+    print(str(n) + " korov")
