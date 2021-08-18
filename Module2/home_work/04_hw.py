@@ -14,3 +14,12 @@
 #    #
 #    #
 ######
+
+a = int(input("Введите размер стороны квадрата: "))
+n = 1
+while n <= a:
+    if 1< n <a:
+        print("#".ljust(a-1) + "#")
+    else:
+        print("#".ljust(a,"#"))
+    n+=1
