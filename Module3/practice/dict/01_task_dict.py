@@ -7,4 +7,5 @@
 item = {"name": "Кроссовки", "price": "7540.5", "currency": "rub", "count": "10"}
 dollar_rate = 74.12
 
-# TODO: your code here
+total_sum=float(item["price"])*int(item["count"])/dollar_rate
+print (f"Цена всех товаров {item['name']} - {total_sum:.2f}$")
