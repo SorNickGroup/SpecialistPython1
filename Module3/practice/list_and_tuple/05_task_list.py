@@ -5,7 +5,14 @@
 # Исходные данные:
 fruits = ["яблоко", "банан", "киви", "арбуз"]
 
-# TODO: your code here
+max_len=0
+for fruit in fruits:
+    if max_len<len(fruit):
+        max_len=len(fruit)
+
+for i,fruit in enumerate(fruits,1):
+    space = " "*(max_len-len(fruit)+1)
+    print(f"{i}.{space}{fruit}")
 
 # Пример вывода:
 # 1. яблоко
