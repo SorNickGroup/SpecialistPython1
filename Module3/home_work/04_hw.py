@@ -5,3 +5,19 @@
 # Пример:
 # Дано: [2, -5, 8, 9, -25, 25, 4]
 # Результат: [3, 5, 2]
+
+numbers=[2, -5, 8, 9, -25, 25, 4]
+nums_sqrt=[]
+print(f"Дано: {numbers}")
+i=0;
+while i<len(numbers):
+    if(numbers[i]>=0):
+        sqrt=numbers[i]**0.5
+        if sqrt%1==0:
+            nums_sqrt.append(int(sqrt))
+    i+=1
+    
+if len(nums_sqrt)>0:
+    print(f"Результат: {nums_sqrt}")
+else:
+    print("В исходном списке нет чисел с извлекаемыми квадратными корнями без десятичной части")
