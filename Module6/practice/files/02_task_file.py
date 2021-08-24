@@ -11,5 +11,22 @@
 # преобразовав каждую цену к числу(цены в файле хранятся в виде строк)
 # А затем, работам с привычным списком, выполните задания
 prices = []
-
+f = open("data/solid.txt", "r", encoding="utf_8")
+for line in f:
+    for el in line.split():
+        prices.append(float(el))
 # Подсказка: для преобразования строки в список вспомните про метод строки .split()
+total_summa = 0;
+min_price = prices[0]
+max_price = prices[0]
+for el in prices:
+    total_summa += el
+    if (min_price > el):
+        min_price = el
+    if (max_price < el):
+        max_price = el
+
+print(prices)
+print(f"Сумма проданных товаров = {total_summa}")
+print(f"Цена самого дорогого товара = {max_price}")
+print(f"Цена самого дешевого товара = {min_price}")
