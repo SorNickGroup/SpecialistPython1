@@ -13,7 +13,21 @@ path = "dir/limericks.txt"  # вместо dir подставь название
 f = open(path, "r")
 # В переменную line считываем строку за стройкой из файла(f)
 for line in f:
-    ...
+    print(line.rstrip())
+
+f.seek(0)
+count_symbols = 0
+for line in f:
+    count_symbols += len(line.strip().replace(" ", ""))
+print(f"\nКоличество непробельных символов в данном файле = {count_symbols}")
+
+f.seek(0)
+count_emp_line = 0
+for line in f:
+    if line == "\n":
+        count_emp_line += 1
+print(f"Количество стихотворений = {count_emp_line + 1}")
+
 
 # Подсказка: пустые строки выглядят так "\n". Помните? Строка считывается вместе с символом переноса!
 # Применение метода "\n".rstrip() --> "" вернет вам пустую строку, строку из НУЛЯ символов.
