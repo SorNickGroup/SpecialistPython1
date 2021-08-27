@@ -25,3 +25,15 @@
 # 2
 # Выходные данные-2:
 # 0
+
+
+h=20
+n=14
+k=9
+
+price_up=200
+price_down=100
+
+count_floors_up=(n-1)%k
+count_floors_down=k-count_floors_up
+print(min(price_up*count_floors_up,price_down*count_floors_down))
