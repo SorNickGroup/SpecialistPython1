@@ -5,3 +5,38 @@
 # Формат выходных данных:
 # Выведите исходный список в порядке убывания баллов. Если у некоторых участников одинаковые баллы,
 # то их между собой нужно упорядочить в порядке возрастания идентификационного номера
+
+members= [
+    {
+        "id": 1,
+        "result": 3440
+    },
+    {
+        "id": 10,
+        "result": 3500
+    },
+    {
+        "id": 101,
+        "result": 4800
+    },
+    {
+        "id": 2,
+        "result": 3500
+    },
+    {
+        "id": 5,
+        "result": 2750
+    },
+    {
+        "id": 24,
+        "result": 1700
+    },
+]
+
+sort_by_result=[]
+for _ in range(len(members)):
+    max_result=min(filter(lambda el: el["result"] == max(members,key=lambda el:el["result"])["result"], members),key=lambda el:el["id"])
+    sort_by_result.append(max_result)
+    members.remove(max_result)
+    
+print(sort_by_result)
